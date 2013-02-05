@@ -43,7 +43,6 @@ var response = {
 				this.breaks[this.breaks.length+1] = [name, config.responsiveBreaks[name]];
 			}
 		}
-
 		this.breaks.sort(function(a, b){
 			return a[1]-b[1];
 		});
@@ -77,6 +76,4 @@ var response = {
 
 $(function(){
 	response.main();
-
-	$('head').append('<meta name="viewport" content="user-scalable=no" class="no-scale" />');
 });
