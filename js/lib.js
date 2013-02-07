@@ -50,7 +50,7 @@ var response = {
 		$(window).resize(this.resize).trigger('resize');
 	},
 	resize: function(){
-		var bodyWidth = parseInt(config.$pageWidthHook.css('min-width'), 16) ? parseInt(config.$pageWidthHook.css('min-width'), 16) : config.$pageWidthHook.width();
+		var bodyWidth = parseInt(config.$pageWidthHook.css('min-width'), 10) ? parseInt(config.$pageWidthHook.css('min-width'), 10) : config.$pageWidthHook.width();
 		var size;
 		for(var i=0;i<response.breaks.length/2;i++){
 			if(bodyWidth <= response.breaks[i][1]){
