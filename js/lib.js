@@ -18,7 +18,7 @@ _ = {
 cookie = {
 	create: function(b,d,c){var a="";c&&(a=new Date,a.setTime(a.getTime()+864E5*c),a="; expires="+a.toGMTString());document.cookie=b+"="+d+a+"; path=/"},
  	read: function(b){for(var d=null,c=document.cookie.replace(/; /g,";").split(";"),a=0;a<c.length;a++){var e=c[a].split("=");if(e[0]==b){d=e[1];break}}return d},
-	delete: function(b){document.cookie=b+"=; expires=Thu, 01 Jan 1970 00:00:01 GMT;"}
+	remove: function(b){document.cookie=b+"=; expires=Thu, 01 Jan 1970 00:00:01 GMT;"}
 };
 
 (_.iPhone) && (document.getElementsByTagName('body')[0].className+=' iPhone');
