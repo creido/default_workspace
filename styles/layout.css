@@ -48,3 +48,5 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 .corners,.corners-top-right,.corners-top,.corners-right{border-top-right-radius:4px}
 .corners,.corners-bottom-right,.corners-bottom,.corners-right{border-bottom-right-radius:4px}
 .corners-none{border-radius: 0}
+
+.text-left{text-align:left;}.text-center{text-align:center;}.text-right{text-align:right;}.text-justify{text-align:justify;}
