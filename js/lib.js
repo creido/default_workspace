@@ -37,7 +37,6 @@ var config = {
 var response = {
 	main: function(){
 		if(!config.responsive) return;
-
 		for(var name in config.responsiveBreaks){
 			if(name.length){
 				this.breaks[this.breaks.length+1] = [name, config.responsiveBreaks[name]];
@@ -46,11 +45,10 @@ var response = {
 		this.breaks.sort(function(a, b){
 			return a[1]-b[1];
 		});
-
 		$(window).resize(this.resize).trigger('resize');
 	},
 	resize: function(){
-		var bodyWidth = parseInt(config.$pageWidthHook.css('min-width'), 10) ? parseInt(config.$pageWidthHook.css('min-width'), 10) : config.$pageWidthHook.width();
+		var bodyWidth = parseInt(config.$pageWidthHook.css('min-width'), 10) ? parseInt(config.$pageWidthHook.css('min-width'), 10) : config.$pageWidthHook.innerWidth();
 		var size;
 		for(var i=0;i<response.breaks.length/2;i++){
 			if(bodyWidth <= response.breaks[i][1]){
